@@ -1,0 +1,37 @@
+{
+  "name": "redis-cacher",
+  "version": "0.0.1",
+  "description": "Simple abstraction level for caching data in Redis",
+  "main": "lib/cache.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "ci-test": "istanbul cover _mocha -- -R tap > result.tap && istanbul report clover"
+  },
+  "repository": "v12/redis-cacher",
+  "keywords": [
+    "redis",
+    "cache",
+    "cacher"
+  ],
+  "author": "Nikita Khomyakov <dr.evil@krtn.eu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/v12/redis-cacher/issues"
+  },
+  "homepage": "https://github.com/v12/redis-cacher#readme",
+  "dependencies": {
+    "bluebird": "^2.9.25",
+    "debug": "^2.2.0",
+    "lodash": "^3.8.0",
+    "redis": "^0.12.1"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "chai-as-promised": "^5.0.0",
+    "istanbul": "^0.3.14",
+    "mocha": "^2.2.5"
+  }
+}
