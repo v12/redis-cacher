@@ -1,5 +1,8 @@
 'use strict';
 
+var Promise = require('bluebird');
+var redis = require('redis');
+
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
@@ -9,7 +12,6 @@ chai.should();
 var time   = Date.now(),
     prefix = 'cacher:test:';
 
-var redis = require('redis');
 var Cache = require('../lib/cache');
 
 describe('Cache', function () {
