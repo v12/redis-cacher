@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "ci-test": "istanbul cover _mocha -- -R tap > result.tap && istanbul report clover"
+    "ci-test": "istanbul cover _mocha -- --compilers js:babel/register -R tap > result.tap && istanbul report clover"
   },
   "repository": "v12/redis-cacher",
   "keywords": [
@@ -29,6 +29,7 @@
     "redis": "^0.12.1"
   },
   "devDependencies": {
+    "babel": "^5.4.3",
     "chai": "^2.3.0",
     "chai-as-promised": "^5.0.0",
     "istanbul": "^0.3.14",
